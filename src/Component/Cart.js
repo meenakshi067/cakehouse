@@ -43,13 +43,14 @@ import { Link } from "react-router-dom"
              <Link to="/routes"><button type="button" class="btn" style={{marginLeft:"60em",fontSize:"20px",border:'2px solid black', fontWeight:'bold', backgroundColor:"#DCDCDC" ,color:"tomato"}}>Checkout</button></Link>
         <table class="table">                        
          <thead>
-    <tr>
+             <h1 style={{color:'purple'}}>Your Cart</h1>
+    {/* <tr>
       <th scope="col">Image</th>
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">Quantity</th>  
       <th scope="col">Action</th>
-    </tr>
+    </tr> */}
   </thead> 
                       </table>
                       

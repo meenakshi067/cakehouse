@@ -9,6 +9,7 @@ class OrderList extends Component {
             list:[]             
         }
     }
+
     componentDidMount() {
         // https://apifromashu.herokuapp.com/api/addcake,post,object
         let apiurl="https://apifromashu.herokuapp.com/api/cakeorders"

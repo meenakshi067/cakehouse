@@ -30,7 +30,7 @@ function Search(props) {
         console.log("error",error);
       }
     );
-  }, [query.q]); //jo humari query hogi search se se usko data nikal ke de dega 
+  }, [query.q]); 
 
   var img="https://thumbs.dreamstime.com/b/emoticon-searching-mascot-vector-cartoon-illustration-emoticon-searching-mascot-vector-cartoon-illustration-original-113901025.jpg"
   return (

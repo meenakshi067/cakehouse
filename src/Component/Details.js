@@ -90,39 +90,7 @@ class Details extends Component {
         )
     }
 
-    // render() {
 
-//         return (
-//             <div>
-//             <div class="card mb-3" style={{ maxWidth: "85vw" ,marginLeft:"13em" ,border:"none"}}>
-//             <Link to={`/cakedetails/${this.props.cakedata.cakeid}`}>
-//             <div class="card " style={{marginTop:"5em"}}>
-//               <div class="row">
-//                 <div class="col-md-4">
-//                 <img src={this.props.cakedata.image} style={{height:"100%" ,width:'30vw'}}class="card-img-top cakeImg" alt="..."></img>
-//                 </div>
-//                 <div class="col-md-8" style={{padding:"5em"}}>
-//                   <div class="card-body" style={{color:"tomato"}}>
-//                       <h3 class="card-title">{this.props.cakedata.name}</h3>                
-//                             <p class="card-text">Ratings : {this.props.cakedata.ratings}</p>  
-//                             <p class="card-text">Price : {this.props.cakedata.price}</p>  
-//                             <p class="card-text">{this.props.cakedata.description}</p>
-//                             <p class="card-text">Weight : {this.props.cakedata.weight}</p>  
-//                             <p class="card-text">Flavour : {this.props.cakedata.flavour}</p>  
-//                             <p class="card-text">Type : {this.props.cakedata.type}</p>                  
-//                             <p class="card-text">{this.props.cakedata.likes}👩‍👧‍👧</p>   
-//                             <button  onClick={this.addToCartCakes} type="button" class="btn btn-success">Add To Cart<i class="fas fa-cart-plus"></i></button>
-//                   </div>
-//                 </div>
-//                     </div>
-//                     </div>
-//                     </Link>
-                
-//             </div>
-//             </div>
-//         )
-
-//     }
 }
 
 export default Details;

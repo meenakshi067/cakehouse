@@ -22,6 +22,7 @@ import OrderList from './Component/OrderList';
 import Addcake from './Component/Addcake';
 import Routes from './Component/Routes';
 import CartUi from './Component/CartUi';
+import {connect} from "react-redux"
 
 
 
@@ -29,9 +30,10 @@ import CartUi from './Component/CartUi';
 
 
 
-
-function App() {
- 
+function App(props) {
+  props.dispatch({
+    type:"Initialise"
+  })
   return (
     <div className="App">
 
@@ -67,4 +69,4 @@ function App() {
 </div>
   );
       }
-export default App;
+export default connect() (App);

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import axios from 'axios'
+import { toast } from "react-toastify";
 
  class CheckOut extends Component {
      constructor(props) {
@@ -11,6 +12,7 @@ import axios from 'axios'
      }
      total=0
      //cakes=[]
+     message={}
     componentDidMount() {
         // console.log(this.props)
         this.props.orderplace.data.map((each)=>{
@@ -53,7 +55,13 @@ import axios from 'axios'
             data:this.placeOrder,
             headers:{"authtoken":localStorage.tokenId}
         }).then((res)=>{
+
             console.log(res.data)
+            if(this.message.message !== 'All fill Entry'){
+                toast(" order successfully");                    
+                console.log("message ;.....",this.message);
+            }
+
         },(err)=>{console.log(err)})
     }
     
@@ -85,15 +93,7 @@ import axios from 'axios'
                     <input type="number" onChange={this.phone.bind(this)} className="form-control" id="exampleInputName"></input>
                 </div>
                 
-                {/* <div className="form-group">
-                    <label for="exampleInputName">Cakes</label>
-                    <input type="text" className="form-control" id="exampleInputName">
-                    </input>
-                </div>
-                <div className="form-group">
-                    <label for="exampleInputPrice">price</label>
-                    <input type="Number" className="form-control" id="exampleInputPrice" ></input>
-                </div> */}
+                
                 <button type="submit" className="btn btn-success" onClick={this.orderPlace.bind(this)}>Order Place</button>
                 </form>
             </div>

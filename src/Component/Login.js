@@ -20,26 +20,47 @@ class Login extends Component{
   }
   
   vaild=()=>{
-    if(this.state.login.email==="" && !this.state.login.email.includes("@") && this.state.login.password.length<4){
-        this.setState({
-            nameErr:"Invaild Email",
-            passErr:"password length must be 4 Character"
-        })
-    }
-    else if(this.state.login.email==="" && !this.state.login.email.includes("@")){
-        this.setState({
-            nameErr:"Invaild Email"
-        })
-    }
-    else if( this.state.login.email==="" && this.state.login.password.length<4){
-        this.setState({
-            passErr:"password length must be 4 Character"
-        })
-    }
-    else{
-        return true;
-    }
+    if(!this.state.login.email ){
+      this.setState({
+          nameErr:"please enter your Email",
+          
+      })
+  }
+  else if(!this.state.login.password){
+      this.setState({
+          passErr:"please fill your vaild password"
+      })
+  }
+  else if(!this.state.login.email && !this.state.login.password || !this.state.login.email.includes("@")){
+      this.setState({
+          nameErr:"Invaild Credentails",
+          passErr:"Password length must be aleast 4 or above Character"
+      })
+  }
+  else if(this.state.login.email && !this.state.login.email.includes("@")){
+      this.setState({
+          nameErr:"Invaild Email"
+      })
+  }
+  
+  else if(!this.state.login.password || this.state.login.password.length<4){
+      this.setState({
+          passErr:"Please Enter Your Vaild Password"
+      })
+  }
+  else if(!this.state.login.password  && this.state.login.password.length<4){
+      this.setState({
+          passErr:"Password length must be aleast 4 or above Character"
+      })
+  }
+  else{
+      return true;
+  }
 }
+
+
+
+
 login={}
 // get value from form
 getEmail=(event)=>{ 
@@ -94,18 +115,6 @@ fetchuseraxios=(e)=>{
 }
 
 
-     
-
-// componentDidMount(){
-//   this.login=JSON.parse(localStorage.getItem('email'));
-//   if(localStorage.getItem('email')){
-//     this.setState({
-//       nameErr: "",
-//       passErr: ""
-//     })
-//   }
-// }
-
 
   
 
@@ -129,45 +138,14 @@ fetchuseraxios=(e)=>{
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
   <button type="submit" class="btn btn-primary" onClick={this.fetchuseraxios}>Submit</button>
+  <Link to="/Registration"> <button type="submit" class="btn btn-primary">Registration</button></Link>
 
   <p className="forget password text-center"></p>
   <Link to="/forgot">Forget password?</Link>
 </form>
 
 
-        
-    
-
-         
-
-
-{/* <table class="table">
-  <thead class="thead-light">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Email</th>
-      <th scope="col">Password</th> */}
-      {/* <th scope="col">Text</th> */}
-      {/* <th scope="col">Image</th> */}
-      {/* <th scope="col">Action</th> */}
-{/*       
-    </tr>
-  </thead>
-  <tbody>
-    {this.state.details1.map((ele,index)=>{
-      return <tr>
-      <th scope="row">{index+1}</th>
-      <td>{ele.Email}</td>
-      <td>{ele.Password}</td> */}
-      {/* <td>{ele.text}</td> */}
-      {/* <td><img src={ele.image} style={{height:"50px", width:"50px"}}></img></td> */}
-      {/* <button onClick={this.deleteEvent}>Delete</button>   */}
-    {/* </tr>
-    
-    })}
-    
-  </tbody>
-</table> */}
+      
 
 </div>
           )

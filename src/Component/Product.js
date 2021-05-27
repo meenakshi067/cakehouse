@@ -61,7 +61,7 @@ class Product extends Component {
             <div>
                
             
-        {!this.state.cakeInfos.length-1 &&<div class="col-md-5 ml-sm-auto col-lg-10 px-md-1" style={{top:"6em" ,right:"9em"}}>            
+        {!this.state.cakeInfos.length-1 &&<div class="col-md-5 ml-sm-auto col-lg-10 px-md-1" style={{top:"6em" ,right:"4em"}}>            
         <table class="table">   
    <tbody>
      <tr>

@@ -12,7 +12,7 @@ class Cake extends Component {
     constructor(props) {
         super(props)
         this.state = {}
-        // this.NavigationDemo()
+       
     }
 
     render() {
@@ -21,7 +21,7 @@ class Cake extends Component {
         return (
             <div>   
             <Link to={`/cakedetails/${this.props.cakedata.cakeid}`}>
-            <div class="card" style={{border:'1px solid black',width: "17rem" ,top:'1em', margin:"2rem"}}>
+            <div class="card" style={{border:'1px solid black',width: "17rem" ,top:'4em', margin:"2rem"}}>
         <img style={{height:"15em"}} src={this.props.cakedata.image} class="card-img-top" alt="..."></img>
         <div class="card-body">
                 <h5 class="card-title">{this.props.cakedata.name}</h5>                

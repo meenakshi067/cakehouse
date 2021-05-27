@@ -43,8 +43,8 @@ class ForgotPass extends Component{
     <small  class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
   
- <Link to="/Registration"> <button type="submit" class="btn btn-primary">Registration</button></Link>
-  {/* <button type="submit" class="btn btn-primary" onClick={this.Getnewpassword}>Get new password</button> */}
+ {/* <Link to="/Registration"> <button type="submit" class="btn btn-primary">Registration</button></Link> */}
+   <button type="submit" style={{marginLeft:'15px'}} class="btn btn-primary" onClick={this.Getnewpassword}>Get new password</button> 
 
  
 
